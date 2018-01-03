@@ -30,7 +30,7 @@ theme: jekyll-theme-tactile
 plugins:
   - jekyll-feed
 
-port: 8080
+port: 8000
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
