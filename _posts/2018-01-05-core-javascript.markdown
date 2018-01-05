@@ -16,6 +16,8 @@ categories: js
 
 [What is browser API?](#what-is-browser-api)
 
+[XML](#xml)
+
 ------
 <br>
 ## Browser
@@ -30,7 +32,11 @@ categories: js
 ## Async
 (asynchronous behavior, promise, event loop)
 
-[Test](test)
+[What is XMLHttpRequest?](#what-is-xmlhttprequest)
+
+[Can you explain Ajax?](#can-you-explain-ajax)
+
+
 
 ------
 <br>
@@ -94,7 +100,12 @@ For example: getUserMedia API, Geolocation API (Google Maps APIs), Twitter APIs,
 
 ---
 <br>
-### Test question
+### XML
+XML is a markup language similar to HTML. It stands for Extensible Markup Language and is a W3C recommended specification as a general purpose markup language.
+This means, unlike other markup languages, XML is not predefined so you must define your own tags.
+The primary purpose of the language is the sharing of data across different systems, such as the Internet.
+
+There are many languages based on XML, like XHTML, MathML, SVG, XUL, XBL, RSS, and RDF. You can also create your own.
 
 ------
 ------
@@ -122,6 +133,38 @@ Data structure is tree.
 ## Async
 
 ### What is XMLHttpRequest?
+Use _XMLHttpRequest_ (XHR) objects to interact with servers.
+You can retrieve data from a URL without having to do a full page refresh.
+This enables a Web page to update just part of a page without disrupting what the user is doing.
+XMLHttpRequest is used heavily in Ajax programming.
+
+Using the XMLHttpRequest API (is the core of Ajax):
+* analyzing and manipulating the response of the server
+* monitoring the progress of a request
+* submitting forms and upload binary files
+* creating synchronous or asynchronous requests
+* using Ajax within Web workers
+
+---
+<br>
+### Can you explain Ajax?
+Ajax is not a technology in itself, that describes a "new" approach to using a number of existing technologies together,
+including HTML or XHTML, Cascading Style Sheets, JavaScript, The Document Object Model, XML, XSLT, and most importantly the XMLHttpRequest object.
+When these technologies are combined in the Ajax model, web applications are able to make quick, incremental updates to the user interface without reloading the entire browser page.
+This makes the application faster and more responsive to user actions.
+
+Ajax stands for _Asynchronous JavaScript + XML_, it is the use of the XMLHttpRequest object to communicate with servers.
+It can send and receive information in various formats, including JSON, XML, HTML, and text files.
+AJAX’s most appealing characteristic is its "asynchronous" nature, which means it can communicate with the server, exchange data, and update the page without having to refresh the page.
+
+The two major features of AJAX allow you to do the following:
+* Make requests to the server without reloading the page
+* Receive and work with data from the server
+
+
+---
+<br>
+
 
 ------
 ------
