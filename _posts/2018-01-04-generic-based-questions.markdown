@@ -1,11 +1,12 @@
 ---
 layout: post
-title:  "Generic web based questions"
+title:  "How internet works or generic web based questions and answers"
 date:   2018-01-04 13:28:00 +0100
-categories: jekyll update
+categories: web based
 ---
 
-### What is DNS (Domain Name System )?
+
+### What is DNS (Domain Name System)?
 DNS is a system to translate domain into an IP address.
 
 

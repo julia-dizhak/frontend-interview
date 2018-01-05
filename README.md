@@ -1,6 +1,4 @@
 # Front-end interview questions and answers
-Front-end interview questions and answers
-
 Essential web development interview questions and answers
 
 ## Development
