@@ -12,23 +12,30 @@ categories: js
 
 [About Javascript](#about-javascript)
 
+[What is API?](#what-is-api)
+
+[What is browser API?](#what-is-browser-api)
+
 ------
 <br>
-
 ## Browser
 (everything about DOM and how the browser works)
 
+
 ------
 <br>
-
 ## Functions
 (bind, call, apply, functional programming)
 
-[What's the difference between .call and .apply?](#what-is-the-difference-between-call-and-apply)
+[What is ternary operator?](#what-is-ternary-operator)
+
+[What's the difference between .call and .apply, .bind?](#what-is-the-difference-between-call-and-apply-bind)
+
 
 ------
+------
 <br>
-<br>
+
 
 ## General
 
@@ -37,9 +44,9 @@ __JavaScript (JS)__ is a lightweight interpreted or JIT-compiled programming lan
 While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Adobe Acrobat and etc.
 JavaScript is a _prototype-based_, multi-paradigm, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
 
+
 ------
 <br>
-
 ### About Javascript.
 What is Javascirpt, really?
 
@@ -47,35 +54,107 @@ __JavaScript__ ("JS" for short) is a full-fledged _dynamic programming language_
 
 It was invented by Brendan Eich, co-founder of the Mozilla.
 
+Js is one of three pillars of modern web development along with HTML and CSS. It is supported by all modern web browsers.
+
+JavaScript contains a standard library of objects, such as Array, Date and Math, and a core set of language elements such as operators, control structures, and statements
+
 JavaScript itself is fairly compact yet very flexible. Developers have written a large variety of tools on top of the core JavaScript language, unlocking a vast amount of extra functionality with minimum effort.
+
 These include:
+* Browser APIs
+* Third-party APIs to allow developers to incorporate functionality in their sites from other content providers, such as Twitter or Facebook
+* Third-party frameworks and libraries you can apply to your HTML to allow you to rapidly build up sites and applications.
+
+
+---
+<br>
+### What is API?
+An __API__ (Application Programming Interface) is a set of rules and specifications that software programs can follow to communicate with each other.
+
+
+---
+<br>
+### What is browser API?
+__Browser API__ (Browser Application Programming Interfaces) — APIs built into web browsers, providing functionality like dynamically creating HTML and setting CSS styles,
+collecting and manipulating a video stream from the user's webcam, or generating 3D graphics and audio samples.
+
+For example: getUserMedia API, Geolocation API (Google Maps APIs), Twitter APIs, Web Animations API
+
+
+---
+<br>
+### Test question
 
 ------
+------
 <br>
+
+## Browser
+
+### Test 1
+
+---
+<br>
+### Test 2
+
+------
+------
 <br>
 
 ## Functions
 
-### What is the difference between .call and .apply?
-What's the difference between .call and .apply?
-(and bind)
-by call, apply, bind you can write common methods for various objects.
+### What is ternary operator?
+! What does the word "Ternary" indicate?
+
+The conditional (ternary) operator is the only JavaScript operator that takes three operands. This operator is frequently used as a shortcut for the if statement.
+`syntax condition ? expr1 : expr2`
+
+---
+<br>
+### What is the difference between .call and .apply, .bind?
+By call, apply, bind you can write common methods for various objects.
+
+The `function.prototype.call()` method calls a function with a given `this` value and `arguments` provided individually. Syntax `function.call(thisArg, arg1, arg2, ...)`
+
+The `function.prototype.apply()` method calls a function with a given `this` value, and `arguments` provided as an array.
+
+{% highlight ruby %}
+let numbers = [5, 6, 2, 3, 7];
+let max = Math.max.apply(null, numbers); // 7
+let min = Math.min.apply(null, numbers); // 2
+{% endhighlight %}
+
+While the syntax of `call()` function is almost identical to that of `apply()`, the fundamental difference is that `call()` accepts an _argument list_,
+while `apply()` accepts a _single array of arguments_.
+
+Example:
+
 call: attaches this function to this object and then run it and gives the result back
+
 apply: I don’t have to pass all the argument, I can combine all argument in array
+
 bind: you only first pass the object itself and it will return a bound function and then you can execute that bound function by passing the argument
 
-var obj = { num: 2 };
-var obj2 = { num: 5 };
+{% highlight ruby %}
+const obj = {num: 2};
+const obj2 = {num: 5};
 
-var addToThis = function( a, b, c ) {
+let addToThis = function(a, b, c) {
    return this.num + a + b + c;
 };
+addToThis.call(obj, 1, 2, 3); // first argument - object you are applying to, the second argument - would be arguments for the function itself
 
-addToThis.call(obj, 1, 2, 3);  // first argument - object you are applying to, 2 arg - would be arguments for the function itself
-//functionname.call(obj, functionarguments);
-
-var arr = [1,2,3];
+const arr = [1,2,3];
 addToThis.apply(obj2, arr);
 
-var bound = addToThis.bind(obj);
+let bound = addToThis.bind(obj);
 bound(1,2,3);
+{% endhighlight %}
+
+
+
+
+
+
+
+

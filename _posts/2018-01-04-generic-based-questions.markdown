@@ -100,13 +100,5 @@ CORS adds new HTTP headers that provide access to permitted origin domains.
 
 ---
 <br>
-### ! What is API (application programming interface)?
-API is a particular set of rules and specifications that software programs can follow to communicate with each other.
-It serves as an interface between different software programs and facilitates their interaction,
-similar to the way the user interface facilitates interaction between humans and computers.
-
-
----
-<br>
 ### What is CDN (content delivery network)?
 is a system of network that deliver pages and web content to a user, based on geographic location of the user, the origin of the webpage and the content delivery server.
