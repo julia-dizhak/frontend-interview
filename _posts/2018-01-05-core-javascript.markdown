@@ -27,6 +27,13 @@ categories: js
 
 ------
 <br>
+## Async
+(asynchronous behavior, promise, event loop)
+
+[Test](test)
+
+------
+<br>
 ## Functions and methods
 (bind, call, apply, functional programming)
 
@@ -95,11 +102,26 @@ For example: getUserMedia API, Geolocation API (Google Maps APIs), Twitter APIs,
 
 ## Browser
 
-### Test 1
+### What is DOM?
+__DOM__ (Document Object Model) is a programming interface for HTML and XML documents.
+It represents the page so that programs can change the document structure, style, and content.
+The DOM represents the document as nodes and objects. That way, programming languages can connect to the page.
+
+A Web page is a document. The DOM is an object-oriented representation of the web page, which can be modified with a scripting language such as JavaScript.
 
 ---
 <br>
-### Test 2
+### What is data structure of DOM?
+Data structure is tree.
+
+
+------
+------
+<br>
+
+## Async
+
+### What is XMLHttpRequest?
 
 ------
 ------
