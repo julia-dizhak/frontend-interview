@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Javascript questions and answers"
+title:  "Javascript core questions and answers"
 date:   2018-01-05 09:00:00 +0100
 categories: js
 ---
@@ -24,13 +24,14 @@ categories: js
 
 ------
 <br>
-## Functions
+## Functions and methods
 (bind, call, apply, functional programming)
 
-[What is ternary operator?](#what-is-ternary-operator)
+[What is ternary operator? !](#what-is-ternary-operator)
 
-[What's the difference between .call and .apply, .bind?](#what-is-the-difference-between-call-and-apply-bind)
+[What is the difference between .call and .apply, .bind?](#what-is-the-difference-between-call-and-apply-bind)
 
+[What is the difference between .foreach and .map?](#what-is-the-difference-between-foreach-and-map)
 
 ------
 ------
@@ -101,22 +102,21 @@ For example: getUserMedia API, Geolocation API (Google Maps APIs), Twitter APIs,
 ------
 <br>
 
-## Functions
+## Functions and Methods
 
 ### What is ternary operator?
-! What does the word "Ternary" indicate?
+What does the word "ternary" indicate?. The conditional operator is the only js operator that takes three operands. This operator is frequently used as a shortcut for the `if` statement:
 
-The conditional (ternary) operator is the only JavaScript operator that takes three operands. This operator is frequently used as a shortcut for the if statement.
-`syntax condition ? expr1 : expr2`
+`condition ? expr1 : expr2`
 
 ---
 <br>
 ### What is the difference between .call and .apply, .bind?
 By call, apply, bind you can write common methods for various objects.
 
-The `function.prototype.call()` method calls a function with a given `this` value and `arguments` provided individually. Syntax `function.call(thisArg, arg1, arg2, ...)`
+The `Function.prototype.call()` method calls a function with a given `this` value and `arguments` provided individually. Syntax `function.call(thisArg, arg1, arg2, ...)`
 
-The `function.prototype.apply()` method calls a function with a given `this` value, and `arguments` provided as an array.
+The `Function.prototype.apply()` method calls a function with a given `this` value, and `arguments` provided as an array.
 
 {% highlight ruby %}
 let numbers = [5, 6, 2, 3, 7];
@@ -151,10 +151,28 @@ let bound = addToThis.bind(obj);
 bound(1,2,3);
 {% endhighlight %}
 
+---
+<br>
+### What is the difference between .foreach and .map?
+The `Array.prototype.forEach()` method executes a provided function once for each array element.
 
+{% highlight ruby %}
+const items = ['item1', 'item2', 'item3'],
+      copy = [];
 
+items.forEach(function(element) {
+    copy.push(element);
+});
+{% endhighlight %}
 
+The `Array.prototype.map()` method creates a new array with the result of calling a provided function on every element in the calling array.
 
+{% highlight ruby %}
+const arr = [1, 4, 9, 16];
+const map1 = arr.map(x => x * 2); // pass a function to map
+console.log(map1); // [2, 8, 18, 32]
+{% endhighlight %}
 
-
+So, `map()` transforms each item in the array and returns a new array of transformed items with same size as that of old array.
+If you just want to iterate over the items in an array and do something with the items you need to use `forEach()`.
 
