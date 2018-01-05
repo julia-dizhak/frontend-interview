@@ -5,9 +5,25 @@ date:   2018-01-04 13:28:00 +0100
 categories: web based
 ---
 
+[TCP? !]
 
-### What is DNS (Domain Name System)?
-DNS is a system to translate domain into an IP address.
+[What is HTTP headers?](#what-is-http-headers)
+
+[What is MIME-type? !]
+
+[Different types of HTTP requests](#different-types-of-http-requests)
+
+[What is the difference between GET and POST? !](#what-is-the-difference-between-get-and-post)
+
+
+
+
+------
+------
+<br>
+
+### What is DNS ?
+DNS (Domain Name System) is a system to translate domain into an IP address.
 
 
 ---
@@ -57,34 +73,39 @@ As I know HTTP is not safe.
 HTTP Secure (HTTPS) or Hypertext Transfer Protocol Secure is an adaptaion of the HTTP for secure communication over a computer network, and is widely used on the Internet.
 For HTTPS we need kind of certificate (SSL certificate between client and server) and API token for sending request to the back-end that ensure it is safe.
 
+---
+<br>
+### What is HTTP headers?
+__HTTP headers__ allow the client and the server to pass additional information with the request or the response.
+
+Headers can be grouped according to their contexts:
+* General header:  doesn't apply to the content itself, like Date, Cache-Control or Connection.
+* Request header: headers containing more information about the resource to be fetched or about the client itself, like Accept, Cookie, User-Agent and etc.
+* Response header: headers with additional information about the response, like its location or about the server itself.
+* Entity header: headers containing more information about the body of the entity, like its content length or its MIME-type.
 
 ---
 <br>
-###  Different types of HTTP requests?
-There are 9 types of HTTP request types or method.
+###  Different types of HTTP requests.
+HTTP __GET__ method requests a representation of resource. Requests using _GET_ should only retrieve data from server.
 
-GET: this request is used to get the Response header and body, so only retrieves data from the server (should only retrieve data and should have no other effect).
+__HEAD__ method same as the GET method for a resource, but returns only the _Response headers_ (i.e., with no entity-body).
 
-HEAD: same as the GET method for a resource, but returns only the Response headers (i.e., with no entity-body).
+__POST__ method sends data to the server for a new entity. It is often used when uploading a file or submitting a completed web form.
 
-POST: Sends data to the server for a new entity. It is often used when uploading a file or submitting a completed web form.
+__PUT__ similar to POST, but used to replace an existing entity.
 
-PUT: Similar to POST, but used to replace an existing entity.
+__PATCH__ similar to PUT, but used to update only certain fields within an existing entity.
 
-PATCH: Similar to PUT, but used to update only certain fields within an existing entity.
+__DELETE__ removes data from the server.
 
-DELETE: Removes data from the server.
+more: TRACE, OPTIONS, CONNECT.
 
-TRACE:
-
-OPTIONS:
-
-CONNECT:
 
 ---
 <br>
-### ! What is the difference between GET and POST?
-Both are methods used in HTTP requests.
+### What is the difference between GET and POST?
+_GET_ and _POST_ are two different types of HTTP requests, where is _GET_ is used to retrieve data, and _POST_ is used to insert/update (send) data.
 
 
 ---

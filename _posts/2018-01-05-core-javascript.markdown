@@ -21,6 +21,9 @@ categories: js
 ## Browser
 (everything about DOM and how the browser works)
 
+[What is DOM?](#what-is-dom)
+
+[What is data structure of DOM?](#what-is-data-structure-of-dom)
 
 ------
 <br>
