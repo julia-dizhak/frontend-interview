@@ -12,6 +12,8 @@ categories: js
 
 [About Javascript](#about-javascript)
 
+What is a strict mode?
+
 [What is API?](#what-is-api)
 
 [What is browser API?](#what-is-browser-api)
@@ -27,6 +29,25 @@ categories: js
 
 [What is data structure of DOM?](#what-is-data-structure-of-dom)
 
+What is difference between load and DOMContentLoaded event?
+
+[Explain js event delegation](#explain-js-event-delegation)
+
+What is an event loop? How do the callbacks work? !
+
+What does a browser do after a user entered the URL of a website?
+
+
+
+-What is a critical rendering path?
+It’s all that browser does to render the page:
+-reads HTML character by character turn them into tokens, then into nodes, then into DOM;
+-Transforms CSS into a CSSOM tree;
+-creates a render tree from the visible DOM nodes;
+-applies CSSOM rules to the nodes of the render tree;
+-computes a layout to understand the size and position of each object on the page;
+-converts each node in the render tree to actual pixels on the screen.
+
 ------
 <br>
 ## Async
@@ -36,7 +57,14 @@ categories: js
 
 [Can you explain Ajax?](#can-you-explain-ajax)
 
+------
+<br>
+## Types
+(coercion, fundamental types, how the typing works in JS)
 
+[What is the difference between 2 and 3 equals?](#what-is-the-difference-between-2-and-3-equals)
+
+[What is the difference between a variable: null, undefined or undeclared?](#what-is-the-difference-between-a-variable-null-undefined-or-undeclared)
 
 ------
 <br>
@@ -126,6 +154,50 @@ A Web page is a document. The DOM is an object-oriented representation of the we
 Data structure is tree.
 
 
+---
+<br>
+### Explain js event delegation.
+Event delegation it is when parent receive an event. Event delegation allows you to avoid adding event listeners to specific nodes; instead, the event listener is added to one parent.
+That event listener analyzes bubbled events to find a match on child elements.
+
+{% highlight ruby %}
+<ul id='parent-list'>
+    <li id='post-1'>Item 1</li>
+    ...
+    <li id='post-4'>Item 4</li>
+</ul>
+{% endhighlight %}
+
+Snippet which illustrates event delegation
+{% highlight ruby %}
+// Get the element, add a click listener...
+document.getElementById("parent-list").addEventListener("click", function(e) {
+        // e.target is the clicked element!
+        // If it was a list item
+        if(e.target && e.target.nodeName == "LI") {
+                // List item found!  Output the ID!
+                console.log("List item ", e.target.id.replace("post-", ""), " was clicked!");
+        }
+});
+// have a parent DIV with many children but all we care about is an A tag with the classA CSS class:
+// Get the parent DIV, add click listener...
+if (e.target && e.target.matches("a.classA")) {
+    console.log("Anchor element clicked!");
+   }
+});
+{% endhighlight %}
+
+
+An event handler you can call _stopPropagation_ to tell the event to cease (stop) bubbling up the DOM.
+
+_stopImmediatePropagation_ method stops the bubbling, and will also stop any other listeners for this event on this element from firing.
+
+_event.preventDefault_ function will prevent the default even from occurring; tells the user agent that if the event does not get explicitly handled, its default action should not be taken as it normally would be.
+
+Google: avoid event been added to specific node, instead been added to parent node, and find the specific child node in event bubbling on that parent.
+Benefits: if append a new child node, no need to rebind another event. New DOM can be created dynamically on the fly; Less event binding, save memory, especially for web apps.
+
+
 ------
 ------
 <br>
@@ -162,9 +234,27 @@ The two major features of AJAX allow you to do the following:
 * Receive and work with data from the server
 
 
----
+------
+------
 <br>
 
+## Types
+
+### What is the difference between 2 and 3 equals?
+It is widely spread that __==__ checks for equality(value) and __===__ checks for equality(value) and type. Well, that is a misconception.
+
+In fact, __==__ checks for equality with _coercion_ and __===__ checks for equality without coercion — _strict equality_.
+
+---
+<br>
+### What is the difference between a variable: null, undefined or undeclared?
+_undefined_ is type of an declared variable that has not yet been assign to a value and is typeof itself “undefined”.
+
+_null_ is the absence of a value, it is an assignment value that can be assigned to a variable as a representation of 'no-value' and is typeof(null) —> object.
+
+_undeclared_ variable means the variable doesn’t exist at all, which will cause error in ‘use strict’ mode (that has been declared without keyword “var”);
+
+How would you go about checking for any of these states? Use console.log and typeof to check if variable undefined or null.
 
 ------
 ------
@@ -180,6 +270,7 @@ What does the word "ternary" indicate?. The conditional operator is the only js 
 ---
 <br>
 ### What is the difference between .call and .apply, .bind?
+All of these three methods are used to attach this into function and the difference is in the function invocation.
 By call, apply, bind you can write common methods for various objects.
 
 The `Function.prototype.call()` method calls a function with a given `this` value and `arguments` provided individually. Syntax `function.call(thisArg, arg1, arg2, ...)`
@@ -195,13 +286,16 @@ let min = Math.min.apply(null, numbers); // 2
 While the syntax of `call()` function is almost identical to that of `apply()`, the fundamental difference is that `call()` accepts an _argument list_,
 while `apply()` accepts a _single array of arguments_.
 
+`call()`: invokes the function immediately and requires you to pass in arguments as a list (one by one).
+
+`apply()`: invokes the function immediately and allows you to pass in arguments as an array.
+
+`bind()`:
+* returns a new function, with a certain context and parameters. It is usually used when you want a function to be called later with a certain context.
+* that is possible thanks to its ability to maintain a given context for calling the original function. This is useful for asynchronous callbacks and events.
+* works like the call function. It requires you to pass in the arguments one by one separated by a comma.
+
 Example:
-
-call: attaches this function to this object and then run it and gives the result back
-
-apply: I don’t have to pass all the argument, I can combine all argument in array
-
-bind: you only first pass the object itself and it will return a bound function and then you can execute that bound function by passing the argument
 
 {% highlight ruby %}
 const obj = {num: 2};
