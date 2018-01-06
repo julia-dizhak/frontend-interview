@@ -11,7 +11,7 @@ categories: web based
 
 [What is HTTP headers?](#what-is-http-headers)
 
-[What is MIME-type? !]
+[What is MIME-type, what does it consist of, and what is it used for?](#what-is-mime-type-what-does-it-consist-of-and-what-is-it-used-for)
 
 [Different types of HTTP requests](#different-types-of-http-requests)
 
@@ -101,6 +101,49 @@ __PATCH__ similar to PUT, but used to update only certain fields within an exist
 __DELETE__ removes data from the server.
 
 more: TRACE, OPTIONS, CONNECT.
+
+
+---
+<br>
+### What is MIME-type, what does it consist of, and what is it used for?
+(Provide an example.)
+
+The _Multipurpose Internet Mail Extensions_ (MIME) type is a standardized way to indicate the nature and format of a document.
+
+Browsers often use the MIME type (and not the file extension) to determine how it will process a document;
+it is therefore important that servers are set up correctly to attach the correct MIME type to the header of the response object.
+
+general structure: `type/subtype`
+
+The structure of a MIME type is very simple; it consists of a type and a subtype, two strings, separated by a `'/'`.
+No space is allowed. The _type_ represents the category and can be a _discrete_ or a _multipart_ type.
+The _subtype_ is specific to each type.
+
+A MIME type is case-insensitive but traditionally is written all in lower case.
+
+Discrete types:
+`text/plain,
+text/html,
+image/jpeg,
+image/png,
+audio/mpeg,
+audio/ogg,
+audio/*,
+video/mp4,
+application/octet-stream,
+…`
+
+Explain the basic structure of a MIME multipart message when used to transfer different content type parts. Provide a simple example.
+
+Myltipart types:
+`multipart/form-data
+multipart/byteranges`
+
+_Multipart types_ indicate a category of document that are broken in distinct parts, often with different MIME types.
+It is a way to represent a _composite_ document.
+With the exception of `multipart/form-data`, that are used in relation of HTML Forms and POST method,
+and `multipart/byteranges` that are used in conjunction with 206 Partial Content status message to send only a subset of a whole document, HTTP doesn't handle multipart documents in a specific way:
+the message is simply transmitted to the browser (which will likely propose a Save As window, not knowing how to display the document inline.)
 
 
 ---
