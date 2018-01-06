@@ -12,13 +12,11 @@ categories: js
 
 [About Javascript](#about-javascript)
 
-What is a strict mode?
+[What is a strict mode?](#what-is-a-strict-mode)
 
-[What is API?](#what-is-api)
+[What is API, browser API?](#what-is-api-browser-api)
 
-[What is browser API?](#what-is-browser-api)
-
-[XML](#xml)
+[HTML, XML, CSS](#xml)
 
 ------
 <br>
@@ -29,6 +27,10 @@ What is a strict mode?
 
 [What is data structure of DOM?](#what-is-data-structure-of-dom)
 
+[What is the difference between window, screen, and document in js?](#what-is-the-difference-between-window-screen-and-document-in-js)
+
+[What is a critical rendering path?](#what-is-a-critical-rendering-path)
+
 What is difference between load and DOMContentLoaded event?
 
 [Explain js event delegation](#explain-js-event-delegation)
@@ -38,15 +40,6 @@ What is an event loop? How do the callbacks work? !
 What does a browser do after a user entered the URL of a website?
 
 
-
--What is a critical rendering path?
-It’s all that browser does to render the page:
--reads HTML character by character turn them into tokens, then into nodes, then into DOM;
--Transforms CSS into a CSSOM tree;
--creates a render tree from the visible DOM nodes;
--applies CSSOM rules to the nodes of the render tree;
--computes a layout to understand the size and position of each object on the page;
--converts each node in the render tree to actual pixels on the screen.
 
 ------
 <br>
@@ -85,7 +78,7 @@ It’s all that browser does to render the page:
 ## General
 
 ### What is Javascript?
-__JavaScript (JS)__ is a lightweight interpreted or JIT-compiled programming language with _first-class functions_.
+__JavaScript__ (JS) is a lightweight interpreted or JIT-compiled programming language with _first-class functions_.
 While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Adobe Acrobat and etc.
 JavaScript is a _prototype-based_, multi-paradigm, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
 
@@ -110,16 +103,34 @@ These include:
 * Third-party APIs to allow developers to incorporate functionality in their sites from other content providers, such as Twitter or Facebook
 * Third-party frameworks and libraries you can apply to your HTML to allow you to rapidly build up sites and applications.
 
+---
+<br>
+### test
+
 
 ---
 <br>
-### What is API?
-An __API__ (Application Programming Interface) is a set of rules and specifications that software programs can follow to communicate with each other.
+### What is a strict mode?
+Use 'strict mode' is a way voluntarily enforce stricter parsing and error handling on your js code at runtime.
+
+Some of the key benefits (advantages) of 'strict mode' include:
+* makes debugging easier
+* if you created a global variable it will report an error
+* eliminates this coercion: without 'strict mode', a reference to a this value of null or undefined is automatically coerced to the global.
+This can cause many headfakes and pull-out-your-hair kind of bugs.
+In 'strict mode', referencing a this value of null or undefined throws an error.
+* 'strict mode' throws an error when it detects a duplicate named property in an object
+(e.g., `var object = {foo: "bar", foo: "baz"}` ) or a duplicate named argument for a function (e.g., `function foo(val1, val2, val1){ }` )
+* makes using _eval the function evaluates js code represented as a string)_ a little safer that it is normally.
+
+Disadvantages ?
 
 
 ---
 <br>
-### What is browser API?
+### What is API, browser API?
+__API__ (Application Programming Interface) is a set of rules and specifications that software programs can follow to communicate with each other.
+
 __Browser API__ (Browser Application Programming Interfaces) — APIs built into web browsers, providing functionality like dynamically creating HTML and setting CSS styles,
 collecting and manipulating a video stream from the user's webcam, or generating 3D graphics and audio samples.
 
@@ -128,12 +139,18 @@ For example: getUserMedia API, Geolocation API (Google Maps APIs), Twitter APIs,
 
 ---
 <br>
-### XML
-XML is a markup language similar to HTML. It stands for Extensible Markup Language and is a W3C recommended specification as a general purpose markup language.
+### HTML, XML, CSS
+_HTML_
+
+_XML_ is a markup language similar to HTML. It stands for Extensible Markup Language and is a W3C recommended specification as a general purpose markup language.
 This means, unlike other markup languages, XML is not predefined so you must define your own tags.
 The primary purpose of the language is the sharing of data across different systems, such as the Internet.
 
 There are many languages based on XML, like XHTML, MathML, SVG, XUL, XBL, RSS, and RDF. You can also create your own.
+
+
+_CSS_
+
 
 ------
 ------
@@ -151,7 +168,35 @@ A Web page is a document. The DOM is an object-oriented representation of the we
 ---
 <br>
 ### What is data structure of DOM?
-Data structure is tree.
+Data structure of DOM is tree.
+
+DOM is a powerful object model for changing the content tree of documents.
+
+Many developers may think of HTML as something flat - a bunch of text with tags in the middle.
+However, it is something much more. Any HTML document is a tree structure.
+
+
+---
+<br>
+### What is the difference between window, screen, and document in js?
+The __window__ object (global object in a browser) represents a window containing a DOM document;
+the document property points to the DOM document loaded in that window. Can also can be treated as the root of the DOM.
+
+__window.screen__ is an object about physical screen dimensions, the user's display.
+
+The __Document__ interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.
+So _window.document_ is the main object of the visible (rendered) DOM.
+
+---
+<br>
+### What is a critical rendering path?
+It is all that browser does to render the page:
+* reads HTML character by character turn them into tokens, then into nodes, then into DOM;
+* transforms CSS into a CSSOM tree;
+* creates a render tree from the visible DOM nodes;
+* applies CSSOM rules to the nodes of the render tree;
+* computes a layout to understand the size and position of each object on the page;
+* converts each node in the render tree to actual pixels on the screen.
 
 
 ---
@@ -316,6 +361,8 @@ bound(1,2,3);
 ---
 <br>
 ### What is the difference between .foreach and .map?
+(What is a map method of array?)
+
 The `Array.prototype.forEach()` method executes a provided function once for each array element.
 
 {% highlight ruby %}

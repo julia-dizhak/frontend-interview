@@ -7,16 +7,17 @@ categories: web based
 
 [TCP? !]
 
+[What is IP, IP Address?](#what-is-ip-ip-address)
+
 [What is HTTP headers?](#what-is-http-headers)
 
 [What is MIME-type? !]
 
 [Different types of HTTP requests](#different-types-of-http-requests)
 
-[What is the difference between GET and POST? !](#what-is-the-difference-between-get-and-post)
+[What is the difference between GET and POST?](#what-is-the-difference-between-get-and-post)
 
-
-
+[What is CORS? How does it work?](#what-is-cors-how-does-it-work)
 
 ------
 ------
@@ -28,17 +29,18 @@ DNS (Domain Name System) is a system to translate domain into an IP address.
 
 ---
 <br>
-### ! What is Internet Protocol?
-IP is the principal communications protocol.
+### What is IP, IP Address?
+__IP__ (Internet Protocol) is the principal communications protocol.
 Its routing function enables internet working, and essentially establishes the Internet.
 It works a little bit like old-fashioned phonebooks where you can look up the name of the person you want to contact and find their phone number and address.
 
-IP address (Internet Protocol Address) - is a numerical label assigned to each device connected to computer network that uses Internet Protocol for communication.
+__IP address__ (Internet Protocol Address) - is a numerical label assigned to each device connected to computer network that uses _Internet Protocol_ for communication.
 Internet Protocol version 4 (IPv4) defines an IP address as a 32-bit number.
 However, because of the growth of the Internet, a new version of IP (IPv6), using 128 bits for the IP address.
 IP addresses are usually written and displayed in human-readable notations, such as 172.16.254.1 in IPv4, and 2001:db8:0:1234:0:567:8:1 in IPv6.
 The size of the routing prefix of the address is designated in CIDR notation by suffixing the address with the number of significant bits, e.g., 192.168.1.15/24,
 which is equivalent to the historically used subnet mask 255.255.255.0. For example, Google IP address 8.8.8.8, 8.8.4.4
+
 
 ---
 <br>
@@ -77,7 +79,6 @@ For HTTPS we need kind of certificate (SSL certificate between client and server
 <br>
 ### What is HTTP headers?
 __HTTP headers__ allow the client and the server to pass additional information with the request or the response.
-
 Headers can be grouped according to their contexts:
 * General header:  doesn't apply to the content itself, like Date, Cache-Control or Connection.
 * Request header: headers containing more information about the resource to be fetched or about the client itself, like Accept, Cookie, User-Agent and etc.
@@ -106,17 +107,16 @@ more: TRACE, OPTIONS, CONNECT.
 <br>
 ### What is the difference between GET and POST?
 _GET_ and _POST_ are two different types of HTTP requests, where is _GET_ is used to retrieve data, and _POST_ is used to insert/update (send) data.
-
+You can't use body headers in _GET_.
 
 ---
 <br>
-### ! What is CORS (Cross-Origin Resource Sharing)? How does it work?
+### What is CORS? How does it work?
 I think in my process of development I’ve looked up some information about CORS.
-As far as I know is kind of policy or a procedure (or a standard) works by adding new HTTP headers that allows servers to describe the set of origins that are permitted to read that information using a web browser.
+As far as I know _Cross-Origin Resource Sharing_ is kind of policy or a procedure (or a standard) works by adding new HTTP headers that allows servers to describe the set of origins that are permitted to read that information using a web browser.
 
-Cross-origin resource sharing is a mechanism that allows many resources (e.g., fonts, JavaScript, etc.) on a web page to be requested from another domain outside the domain from which the resource originated.
-It’s a mechanism supported in HTML5 that manages XMLHttpRequest access to a domain different.
-CORS adds new HTTP headers that provide access to permitted origin domains.
+Cross-origin resource sharing is a mechanism that allows many resources (e.g., fonts, JavaScript, etc.) on a web page to be requested from another domain outside
+the domain from which the resource originated.
 
 
 ---
