@@ -12,11 +12,13 @@ categories: js
 
 [About Javascript](#about-javascript)
 
-[What is a strict mode?](#what-is-a-strict-mode)
+[What is a strict mode? !](#what-is-a-strict-mode)
 
 [What is API, browser API?](#what-is-api-browser-api)
 
-[HTML, XML, CSS](#xml)
+[HTML, XML, XSLT, CSS](#html-xml-xslt-css)
+
+[SVG and Canvas !](#svg-and-canvas)
 
 ------
 <br>
@@ -111,9 +113,9 @@ These include:
 ---
 <br>
 ### What is a strict mode?
-Use 'strict mode' is a way voluntarily enforce stricter parsing and error handling on your js code at runtime.
+Js is executed in strict mode by using the 'use strict' directive. Strict mode tightens the rules for parsing and error handling on your code.
 
-Some of the key benefits (advantages) of 'strict mode' include:
+Some of the key benefits (advantages) are:
 * makes debugging easier
 * if you created a global variable it will report an error
 * eliminates this coercion: without 'strict mode', a reference to a this value of null or undefined is automatically coerced to the global.
@@ -139,18 +141,30 @@ For example: getUserMedia API, Geolocation API (Google Maps APIs), Twitter APIs,
 
 ---
 <br>
-### HTML, XML, CSS
-_HTML_
+### HTML, XML, XSLT, CSS
+__HTML__ (HyperText Markup Language) is the most basic building block of the Web.
+It describes and defines the content of a webpage. Other technologies besides HTML are generally used to describe a webpage's appearance/presentation _(CSS)_ or functionality/behavior _(JavaScript)_.
 
-_XML_ is a markup language similar to HTML. It stands for Extensible Markup Language and is a W3C recommended specification as a general purpose markup language.
+_HyperText_ refers to links that connect webpages to one another, either within a single website or between websites.
+Links are a fundamental aspect of the Web. By uploading content to the Internet and linking it to pages created by other people, you become an active participant in the World Wide Web.
+
+__XML__ is a markup language similar to HTML. It stands for Extensible Markup Language and is a W3C recommended specification as a general purpose markup language.
 This means, unlike other markup languages, XML is not predefined so you must define your own tags.
 The primary purpose of the language is the sharing of data across different systems, such as the Internet.
 
 There are many languages based on XML, like XHTML, MathML, SVG, XUL, XBL, RSS, and RDF. You can also create your own.
 
+__XSLT__ (Extensible Stylesheet Language Transformations) is an _XML-based_ language used, in conjunction with specialized processing software, for the transformation of XML documents.
+XSLT is most often used to convert data between different XML schemas or to convert XML data into web pages or PDF documents.
 
-_CSS_
+__CSS__ (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG or XHTML).
+CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.
 
+
+---
+<br>
+### SVG and Canvas
+__Scalable Vector Graphics__ (SVG) is an _XML-based_ markup language for describing two dimensional based vector graphics. SVG is essentially to graphics what _HTML_ is to text.
 
 ------
 ------
