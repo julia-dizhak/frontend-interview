@@ -1,0 +1,64 @@
+---
+layout: post
+title:  "Computer science questions and answers"
+date:   2018-01-07 09:00:00 +0100
+categories: js
+---
+
+[What is an algorithm and why should you care?](#what-is-an-algorithm-and-why-should-you-care)
+
+[What is pure function? !](#)
+
+[What is recursion?](#what-is-recursion)
+
+[What is data, data structure? !](#what-is-data-data-structure)
+
+[What is OOP?](#what-is-oop)
+
+[Prototype-based programming](#prototype-based-programming)
+
+------
+------
+<br>
+## What is an algorithm and why should you care?
+An __algorithm__ is a step by step method of solving a problem.
+It is commonly used for data processing, calculation and other related computer and mathematical operations.
+An algorithm is a set of instructions designed to perform a specific task.
+This can be a simple process, such as multiplying two numbers, or a complex operation, such as playing a compressed video file.
+In computer programming, algorithms are often created as functions.
+
+
+---
+<br>
+## What is recursion?
+__Recursion__ is an important programming technique, in which a function calls itself.
+
+
+---
+<br>
+## What is data, data structure?
+__Data structure__
+is a particular way of organizing and storing data in a computer so that it can be accessed and modified efficiently.
+More precisely, a _data structure_ is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data.
+
+
+---
+<br>
+## What is OOP?
+__Objected-oriented programming__ (OOP)
+refers to a programming methodology based on objects, instead of functions and procedures.
+These objects are organized into classes, which allow individual objects to be group together.
+
+
+---
+<br>
+## Prototype-based programming
+__Prototype-based programming__ is a style of object-oriented programming in which classes are not explicitly defined,
+but rather derived by adding properties and methods to an instance of another class or, less frequently, add them to an empty object.
+
+In simple words, this type of style allows creating an object, without defining its class.
+
+
+
+
+

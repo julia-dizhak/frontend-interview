@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Javascript core questions and answers"
+title:  "Js core questions and answers"
 date:   2018-01-05 09:00:00 +0100
 categories: js
 ---
@@ -73,7 +73,7 @@ What does a browser do after a user entered the URL of a website?
 
 [How does this keyword work in js?](#how-does-this-work-in-js)
 
-[What is prototypal inheritance?](#)
+[What is prototypal inheritance? !](#)
 
 
 ------
@@ -369,24 +369,13 @@ But if we have an object `a`, and method inside called `b`, in this circumstance
 
 The following list is the ordered rules for determining _this_. Stop at the first one that applies:
 * __'new' binding__ when using the new keyword to call a function, this is the newly constructed object.
-* test
-
-Inside the function, the value of this depends on how the function is called.
-- To pass the value of this from one context to another, use call or apply
-- Bind; this lets you create a copy of the function with a definite context. Bind returns a copy of the function, and doesn’t affect the original.
-- arrow functions ?
-- as an object method: when function is called as a method of an object, its this is set to the object the method is called on
-- this on the object prototype chain
-- this with getter or setter?
-- as a constructor ?
-- as a DOM event handler: when function is used as an event handler, its this is set to the element the event fired from
-- in an in-line event handler, its this is set to the DOM element on which is listener is placed
-
-Google: this evaluates to the value of the ThisBinding of the current execution context. If function is all by obj.func(), this will refer to obj, if func.call(obj) (apply, bind), this refer to obj, otherwise, refers to window
-
----
-<br>
-### Test
+* __explicit binding__ when _call_ or _apply_ are used to call a function, this is the object that is passed in as the argument
+* _bind_ this lets you create a copy of the function with a definite context; _bind_ returns a copy of the function, and doesn’t affect the original.
+* __implicit binding__ when a function is called with a context (the containing object), this is the object that the function is a property of.
+This means that a function is being called as a method.
+* __default binding__ if none of the above rules applies, this is the global object (in a browser, it’s the window object).
+* __lexical this__ when a function is called with an `arrow function =>`, this receives the this value of its surrounding scope at the time it’s created.
+this keeps the value from its original context.
 
 
 ------
