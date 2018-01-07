@@ -42,7 +42,6 @@ What is an event loop? How do the callbacks work? !
 What does a browser do after a user entered the URL of a website?
 
 
-
 ------
 <br>
 ## Async
@@ -51,6 +50,7 @@ What does a browser do after a user entered the URL of a website?
 [What is XMLHttpRequest?](#what-is-xmlhttprequest)
 
 [Can you explain Ajax?](#can-you-explain-ajax)
+
 
 ------
 <br>
@@ -61,10 +61,27 @@ What does a browser do after a user entered the URL of a website?
 
 [What is the difference between a variable: null, undefined or undeclared?](#what-is-the-difference-between-a-variable-null-undefined-or-undeclared)
 
+
+------
+<br>
+## Objects
+(this, scope, prototypes, classes)
+
+[What is scope?](#what-is-scope)
+
+[What is context?](#what-is-context)
+
+[How does this keyword work in js?](#how-does-this-work-in-js)
+
+[What is prototypal inheritance?](#)
+
+
 ------
 <br>
 ## Functions and methods
 (bind, call, apply, functional programming)
+
+[What is block scope, a function scope?](#)
 
 [What is ternary operator? !](#what-is-ternary-operator)
 
@@ -314,6 +331,63 @@ _null_ is the absence of a value, it is an assignment value that can be assigned
 _undeclared_ variable means the variable doesn’t exist at all, which will cause error in ‘use strict’ mode (that has been declared without keyword “var”);
 
 How would you go about checking for any of these states? Use console.log and typeof to check if variable undefined or null.
+
+
+------
+------
+<br>
+
+## Objects
+
+### What is scope?
+__Scope__ refers to the _execution context_. It defines the accessibility of variables and functions in the code.
+
+__Global Scope__ is the outermost scope.
+Variables declared outside a function are in the global scope and can be accessed in any other scope. In a browser, the window object is the global scope.
+
+__Local Scope__ is a scope nested inside another function scope. Variables declared in a local scope are accessible within this scope as well as in any inner scopes.
+
+
+---
+<br>
+### What is context?
+__Context__ (execution context) is often confused as the same thing as _Scope_. To clear things up, lets keep the following in mind:
+
+_Context_ is most often determined by how a function is invoked. It always refers to the value of _this_ in a particular part of your code.
+
+_Scope_ refers to the visibility of variables.
+
+
+---
+<br>
+### How does this work in js?
+This is a really complex concept in js.
+As far as my understanding of `this` keyword is bind the _context_ when the function is executed instead of when is defined.
+_Execution context simply means how a function is called._
+For example, if we just execute a function in a global environment, outside of any function, this refers to the global scope (global object window, if we don’t use strict mode).
+But if we have an object `a`, and method inside called `b`, in this circumstances, this will be reference to `a` object.
+
+The following list is the ordered rules for determining _this_. Stop at the first one that applies:
+* __'new' binding__ when using the new keyword to call a function, this is the newly constructed object.
+* test
+
+Inside the function, the value of this depends on how the function is called.
+- To pass the value of this from one context to another, use call or apply
+- Bind; this lets you create a copy of the function with a definite context. Bind returns a copy of the function, and doesn’t affect the original.
+- arrow functions ?
+- as an object method: when function is called as a method of an object, its this is set to the object the method is called on
+- this on the object prototype chain
+- this with getter or setter?
+- as a constructor ?
+- as a DOM event handler: when function is used as an event handler, its this is set to the element the event fired from
+- in an in-line event handler, its this is set to the DOM element on which is listener is placed
+
+Google: this evaluates to the value of the ThisBinding of the current execution context. If function is all by obj.func(), this will refer to obj, if func.call(obj) (apply, bind), this refer to obj, otherwise, refers to window
+
+---
+<br>
+### Test
+
 
 ------
 ------

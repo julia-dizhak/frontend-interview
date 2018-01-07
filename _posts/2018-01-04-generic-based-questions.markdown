@@ -133,7 +133,7 @@ video/mp4,
 application/octet-stream,
 …`
 
-Explain the basic structure of a MIME multipart message when used to transfer different content type parts. Provide a simple example.
+_Explain the basic structure of a MIME multipart message when used to transfer different content type parts. Provide a simple example._
 
 Myltipart types:
 `multipart/form-data
