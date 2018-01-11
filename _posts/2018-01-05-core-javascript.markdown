@@ -25,9 +25,7 @@ categories: js
 ## Browser
 (everything about DOM and how the browser works)
 
-[What is DOM?](#what-is-dom)
-
-[What is data structure of DOM?](#what-is-data-structure-of-dom)
+[What is DOM? What is data structure of DOM?](#what-is-dom-what-is-data-structure-of-dom)
 
 [What is the difference between window, screen, and document in js?](#what-is-the-difference-between-window-screen-and-document-in-js)
 
@@ -189,19 +187,14 @@ __Scalable Vector Graphics__ (SVG) is an _XML-based_ markup language for describ
 
 ## Browser
 
-### What is DOM?
+### What is DOM? What is data structure of DOM?
 __DOM__ (Document Object Model) is a programming interface for HTML and XML documents.
 It represents the page so that programs can change the document structure, style, and content.
 The DOM represents the document as nodes and objects. That way, programming languages can connect to the page.
 
 A Web page is a document. The DOM is an object-oriented representation of the web page, which can be modified with a scripting language such as JavaScript.
 
----
-<br>
-### What is data structure of DOM?
-Data structure of DOM is tree.
-
-DOM is a powerful object model for changing the content tree of documents.
+Data structure of DOM is _tree_ (hierarchical data structure). DOM is a powerful object model for changing the content tree of documents.
 
 Many developers may think of HTML as something flat - a bunch of text with tags in the middle.
 However, it is something much more. Any HTML document is a tree structure.

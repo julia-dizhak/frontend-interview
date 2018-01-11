@@ -1,0 +1,51 @@
+---
+layout: post
+title:  "Html questions and answers"
+date:   2018-01-09 10:00:00 +0100
+categories: html
+---
+
+[What is the difference between block and inline elements?](#test)
+
+[What is DOCTYPE?](#test)
+
+[structure](#)
+
+[Strong](#yarn)
+
+[Gulp !](#gulp)
+
+------
+------
+<br>
+### Doctype
+DOCTYPE describes the type of HTML. While there are technically different types, for 99.999% of the HTML you'll write `<!DOCTYPE html>`.
+Browsers look for this doctype declaration to determine which rendering mode to use to render the web site.
+
+---
+<br>
+### structure
+<head>: Describes meta information about the site, such as the title, and provides links to scripts and stylesheets the site needs to render and behave correctly.
+<body>: Describes the actual content of the site that users will see.
+
+---
+<br>
+### What is the difference between block and inline elements?
+_p_ - a big block of text that is separate from other pieces of text
+
+__block__ is a block-level element occupies the entire space of its parent element (container). Browsers typically display the block-level element with a newline both before and after the element.
+
+_span_ is line of text, isn’t really separate from other pieces of text.
+
+__inline element__
+an inline element does not start on a new line and only takes up as much width as necessary; only occupy the space bounded by the tags defining the element, instead of breaking the flow of the content.
+
+---
+<br>
+### strong
+strong is smth important
+
+Yarn provides a number of benefits including:
+* auto generation of lock files (yarn_lock),
+* quicker package downloads,
+* the ability to download packages offline.

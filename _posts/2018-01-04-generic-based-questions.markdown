@@ -32,7 +32,7 @@ DNS (Domain Name System) is a system to translate domain into an IP address.
 ### What is IP, IP Address?
 __IP__ (Internet Protocol) is the principal communications protocol.
 Its routing function enables internet working, and essentially establishes the Internet.
-It works a little bit like old-fashioned phonebooks where you can look up the name of the person you want to contact and find their phone number and address.
+(It works a little bit like old-fashioned phonebooks where you can look up the name of the person you want to contact and find their phone number and address).
 
 __IP address__ (Internet Protocol Address) - is a numerical label assigned to each device connected to computer network that uses _Internet Protocol_ for communication.
 Internet Protocol version 4 (IPv4) defines an IP address as a 32-bit number.

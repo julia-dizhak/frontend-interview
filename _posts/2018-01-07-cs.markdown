@@ -15,7 +15,7 @@ categories: js
 
 [What is OOP?](#what-is-oop)
 
-[Prototype-based programming](#prototype-based-programming)
+[Is Js Prototype-based or class-based programming language](#prototype-based-programming)
 
 ------
 ------
@@ -44,15 +44,23 @@ More precisely, a _data structure_ is a collection of data values, the relations
 
 ---
 <br>
-## What is OOP?
-__Objected-oriented programming__ (OOP)
-refers to a programming methodology based on objects, instead of functions and procedures.
+## What is OOP, object, class?
+__OOP (Object-Oriented Programming)__ is an approach in programming in which data is encapsulated within _objects_ and the object itself is operated on, rather than its component parts.
+
+_Objected-oriented programming_ refers to a programming methodology based on objects, instead of functions and procedures.
 These objects are organized into classes, which allow individual objects to be group together.
 
+Object refers to a data structure containing data and instructions for working with the data. Objects sometimes refer to real-world things, for example a car or map object in a racing game. JavaScript, Java, C++, Python, and Ruby are examples of object-oriented programming languages.
+
+In object-oriented programming, a class defines an object's characteristics. Class is a template definition of an object's properties and methods, the "blueprint" from which other more specific instances of the object are drawn.
 
 ---
 <br>
 ## Prototype-based programming
+JavaScript is heavily object-oriented. It follows a prototype-based model (as opposed to class-based).
+
+JavaScript is an object-based language based on prototypes, rather than being class-based. Because of this different basis, it can be less apparent how JavaScript allows you to create hierarchies of objects and to have inheritance of properties and their values. This chapter attempts to clarify the situation.
+
 __Prototype-based programming__ is a style of object-oriented programming in which classes are not explicitly defined,
 but rather derived by adding properties and methods to an instance of another class or, less frequently, add them to an empty object.
 
@@ -60,5 +68,9 @@ In simple words, this type of style allows creating an object, without defining 
 
 
 
+Class-based object-oriented languages, such as Java and C++, are founded on the concept of two distinct entities: classes and instances.
 
+A class defines all of the properties (considering methods and fields in Java, or members in C++, to be properties) that characterize a certain set of objects. A class is an abstract thing, rather than any particular member of the set of objects it describes. For example, the Employee class could represent the set of all employees.
+An instance, on the other hand, is the instantiation of a class; that is, one of its members. For example, Victoria could be an instance of the Employee class, representing a particular individual as an employee. An instance has exactly the same properties of its parent class (no more, no less).
+A prototype-based language, such as JavaScript, does not make this distinction: it simply has objects. A prototype-based language has the notion of a prototypical object, an object used as a template from which to get the initial properties for a new object. Any object can specify its own properties, either when you create it or at run time. In addition, any object can be associated as the prototype for another object, allowing the second object to share the first object's properties.
 

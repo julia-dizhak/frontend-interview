@@ -5,24 +5,19 @@ date:   2018-01-06 13:28:00 +0100
 categories: front-end
 ---
 
-[What is front-end / back-end?](#what-is-ip-front-end)
+[What is front-end/back-end? !](#what-is-ip-front-end)
 
-Agile
+[What did you learn yesterday/this week? !]()
 
-Which version control systems are you familiar with?
-Github
-Git is a version control system for tracking changes in computer files and coordinating work on those files among multiple people.
-GitHub is a Web-based Git version control repository hosting service. It is mostly used for computer code.
+[What are your favorite features of html5 and css3? !](#)
 
-1 What did you learn yesterday/this week?
-[What are your favorite features of html5 and css3?](#)
+[How do you test your JS code? !](#)
 
+[What is the difference between two-way data binding and one-way data flow? !]()
 
-[How do you test your JS code?](#)
+[Which version control systems are you familiar with?](#which-version-control-systems-are-your-familiar-with)
 
-[What is the difference between two-way data binding and one-way data flow?]()
-
-
+[Agile, Scrum](#)
 
 ------
 ------
@@ -38,7 +33,9 @@ The goal of question is to see, if you really passionate about technology.
 
 ---
 <br>
-### ?
+### Which version control systems are you familiar with?
+__Git__ is a version control system for tracking changes in computer files and coordinating work on those files among multiple people.
+_GitHub_ is a web-based Git version control repository hosting service. It is mostly used for computer code.
 
 
 
