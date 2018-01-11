@@ -5,47 +5,66 @@ date:   2018-01-09 10:00:00 +0100
 categories: html
 ---
 
-[What is the difference between block and inline elements?](#test)
+[What is HTML, XML, XSLT](#what-is-html-xml-xslt)
 
-[What is DOCTYPE?](#test)
+[What is DOCTYPE?](#what-is-doctype)
 
-[structure](#)
+[Structure of HTML document !](#)
 
-[Strong](#yarn)
+[What is the difference between block and inline elements? !](#test)
 
-[Gulp !](#gulp)
+[Strong](#test)
 
 ------
 ------
 <br>
-### Doctype
+
+### What is HTML, XML, XSLT
+__HTML__ (HyperText Markup Language) is the most basic building block of the Web.
+It describes and defines the content of a webpage. Other technologies besides _HTML_ are generally used to describe a webpage's appearance/presentation _(CSS)_ or functionality/behavior _(JavaScript)_.
+
+_HyperText_ refers to links that connect webpages to one another, either within a single website or between websites.
+Links are a fundamental aspect of the Web. By uploading content to the Internet and linking it to pages created by other people, you become an active participant in the World Wide Web.
+
+__XML__ is a markup language similar to _HTML_. It stands for Extensible Markup Language and is a W3C recommended specification as a general purpose markup language.
+This means, unlike other markup languages, XML is not predefined so you must define your own tags.
+The primary purpose of the language is the sharing of data across different systems, such as the Internet.
+
+There are many languages based on XML, like XHTML, MathML, SVG, XUL, XBL, RSS, and RDF. You can also create your own.
+
+__XSLT__ (Extensible Stylesheet Language Transformations) is an _XML-based_ language used, in conjunction with specialized processing software, for the transformation of XML documents.
+XSLT is most often used to convert data between different XML schemas or to convert XML data into web pages or PDF documents.
+
+
+---
+<br>
+### What is Doctype
 DOCTYPE describes the type of HTML. While there are technically different types, for 99.999% of the HTML you'll write `<!DOCTYPE html>`.
-Browsers look for this doctype declaration to determine which rendering mode to use to render the web site.
+Browsers look for this doctype declaration to determine which rendering mode to use to render the website.
+
 
 ---
 <br>
 ### structure
-<head>: Describes meta information about the site, such as the title, and provides links to scripts and stylesheets the site needs to render and behave correctly.
-<body>: Describes the actual content of the site that users will see.
+_head_: describes meta information about the site, such as the title, and provides links to scripts and stylesheets the site needs to render and behave correctly.
+
+_body_: describes the actual content of the site that users will see.
+
 
 ---
 <br>
 ### What is the difference between block and inline elements?
-_p_ - a big block of text that is separate from other pieces of text
-
 __block__ is a block-level element occupies the entire space of its parent element (container). Browsers typically display the block-level element with a newline both before and after the element.
 
-_span_ is line of text, isn’t really separate from other pieces of text.
+_p_ - a big block of text that is separate from other pieces of text
 
 __inline element__
 an inline element does not start on a new line and only takes up as much width as necessary; only occupy the space bounded by the tags defining the element, instead of breaking the flow of the content.
+
+_span_ is line of text, isn’t really separate from other pieces of text.
+
 
 ---
 <br>
 ### strong
 strong is smth important
-
-Yarn provides a number of benefits including:
-* auto generation of lock files (yarn_lock),
-* quicker package downloads,
-* the ability to download packages offline.

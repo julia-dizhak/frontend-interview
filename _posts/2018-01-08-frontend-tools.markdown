@@ -5,11 +5,12 @@ date:   2018-01-08 10:00:00 +0100
 categories: tool
 ---
 
-[Npm !](#npm)
+[Npm grab from presentaion !](#npm)
 
 [Yarn !](#yarn)
 
-[Gulp !](#gulp)
+[Gulp (grab from presentaion !](#gulp)
+
 
 ------
 ------
@@ -36,3 +37,6 @@ Yarn provides a number of benefits including:
 * auto generation of lock files (yarn_lock),
 * quicker package downloads,
 * the ability to download packages offline.
+
+<br>
+### Gulp
