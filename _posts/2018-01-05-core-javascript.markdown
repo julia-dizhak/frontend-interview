@@ -164,8 +164,8 @@ __Scalable Vector Graphics__ (SVG) is an _XML-based_ markup language for describ
 
 ### What is DOM? What is data structure of DOM?
 __DOM__ (Document Object Model) is a programming interface for HTML and XML documents.
-It represents the page so that programs can change the document structure, style, and content.
-The DOM represents the document as nodes and objects. That way, programming languages can connect to the page.
+It represents the document as nodes and objects so that programs can change the document structure, style, and content.
+That way, programming languages can connect to the page.
 
 A Web page is a document. The DOM is an object-oriented representation of the web page, which can be modified with a scripting language such as JavaScript.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Html questions and answers"
+title:  "CSS questions and answers"
 date:   2018-01-12 10:00:00 +0100
 categories: html
 ---

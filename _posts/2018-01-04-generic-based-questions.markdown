@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How internet works or generic web based questions and answers"
+title:  "How internet works or generic web based questions"
 date:   2018-01-04 13:28:00 +0100
 categories: web based
 ---
