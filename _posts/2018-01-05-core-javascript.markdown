@@ -1,17 +1,15 @@
 ---
 layout: post
-title:  "Js core questions and answers"
+title:  "Js core questions"
 date:   2018-01-05 09:00:00 +0100
 categories: js
 ---
 
-## General (everything else)
+## General <span>(everything else)</span>
 
-[What is Javascript?](#what-is-javascript)
+[What is about Javascript?](#what-is-about-javascript)
 
-[About Javascript](#about-javascript)
-
-[What is a strict mode? !](#what-is-a-strict-mode)
+[What is advantages and disadvantages of a strict mode?](#what-is-advantages-and-disadvantages-of-a-strict-mode)
 
 [What is API, browser API?](#what-is-api-browser-api)
 
@@ -91,54 +89,38 @@ What does a browser do after a user entered the URL of a website?
 
 ## General
 
-### What is Javascript?
-__JavaScript__ (JS) is a lightweight interpreted or JIT-compiled programming language with _first-class functions_.
+### What is about Javascript?
+__JavaScript__ ("JS" for short) is a lightweight interpreted or JIT-compiled programming language with _first-class functions_
+(that means the language supports passing functions as arguments to other functions, returning them as the values from other functions, and assigning them to variables or storing them in data structures).
 While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Adobe Acrobat and etc.
 JavaScript is a _prototype-based_, multi-paradigm, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
 
-
-------
-<br>
-### About Javascript.
-What is Javascirpt, really?
-
-__JavaScript__ ("JS" for short) is a full-fledged _dynamic programming language_ that, when applied to an _HTML_ document, can provide dynamic interactivity on websites.
+What is Javascirpt, really? _JavaScript_ is a full-fledged _dynamic programming language_ that, when applied to an _HTML_ document, can provide dynamic interactivity on websites.
 
 It was invented by Brendan Eich, co-founder of the Mozilla.
 
-Js is one of three pillars of modern web development along with HTML and CSS. It is supported by all modern web browsers.
-
-JavaScript contains a standard library of objects, such as Array, Date and Math, and a core set of language elements such as operators, control structures, and statements
-
-JavaScript itself is fairly compact yet very flexible. Developers have written a large variety of tools on top of the core JavaScript language, unlocking a vast amount of extra functionality with minimum effort.
-
-These include:
-* Browser APIs
-* Third-party APIs to allow developers to incorporate functionality in their sites from other content providers, such as Twitter or Facebook
-* Third-party frameworks and libraries you can apply to your HTML to allow you to rapidly build up sites and applications.
-
----
-<br>
-### test
+JS is one of three pillars of modern web development along with HTML and CSS. It is supported by all modern web browsers.
+JS contains a standard library of objects, such as Array, Date and Math, and a core set of language elements such as operators, control structures, and statements.
 
 
 ---
 <br>
-### What is a strict mode?
-Js is executed in strict mode by using the 'use strict' directive. Strict mode tightens the rules for parsing and error handling on your code.
+### What is advantages and disadvantages of a strict mode?
+JS is executed in strict mode by using the 'use strict' directive (usually at the top of js file of function).
+Strict mode tightens the rules for parsing and error handling on your code. Some of the key benefits are:
 
-Some of the key benefits (advantages) are:
-* makes debugging easier
-* if you created a global variable it will report an error
-* eliminates this coercion: without 'strict mode', a reference to a this value of null or undefined is automatically coerced to the global.
+* makes debugging easier;
+* if you created a global variable it will report an error;
+* eliminates _this_ coercion: without 'strict mode', a reference to a this value of null or undefined is automatically coerced to the global.
 This can cause many headfakes and pull-out-your-hair kind of bugs.
-In 'strict mode', referencing a this value of null or undefined throws an error.
+In _'strict mode'_, referencing a _this_ value of null or undefined throws an error;
 * 'strict mode' throws an error when it detects a duplicate named property in an object
 (e.g., `var object = {foo: "bar", foo: "baz"}` ) or a duplicate named argument for a function (e.g., `function foo(val1, val2, val1){ }` )
-* makes using _eval the function evaluates js code represented as a string)_ a little safer that it is normally.
+* makes using eval (_the function evaluates js code represented as a string_) a little safer that it is normally.
 
-Disadvantages ?
-
+Disadvantages:
+* no more _with_ statement
+* no more _arguments.caller_, _arguments.callee_
 
 ---
 <br>
@@ -164,12 +146,18 @@ __Scalable Vector Graphics__ (SVG) is an _XML-based_ markup language for describ
 
 ### What is DOM? What is data structure of DOM?
 __DOM__ (Document Object Model) is a programming interface for HTML and XML documents.
+The DOM connects web pages to scripts or programming languages.
+
 It represents the document as nodes and objects so that programs can change the document structure, style, and content.
 That way, programming languages can connect to the page.
 
 A Web page is a document. The DOM is an object-oriented representation of the web page, which can be modified with a scripting language such as JavaScript.
 
-Data structure of DOM is _tree_ (hierarchical data structure). DOM is a powerful object model for changing the content tree of documents.
+The DOM model represents a document with a logical _tree_ (hierarchical data structure). DOM is a powerful object model for changing the content tree of documents.
+Each branch of the tree ends in a node, and each node contains objects.
+DOM methods allow programmatic access to the tree; with them you can change the document's structure, style or content.
+Nodes can have event handlers attached to them. Once an event is triggered, the event handlers get executed.
+
 
 Many developers may think of HTML as something flat - a bunch of text with tags in the middle.
 However, it is something much more. Any HTML document is a tree structure.

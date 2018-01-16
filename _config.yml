@@ -31,7 +31,7 @@ theme: minima
 plugins:
   - jekyll-feed
 
-port: 8000
+port: 8080
 
 sass:
   sass_dir: _sass
