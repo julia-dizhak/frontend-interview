@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Js core questions"
+title:  "JS core questions"
 date:   2018-01-05 09:00:00 +0100
 categories: js
 ---
 
-## General <span>(everything else)</span>
+## General <span>(everything else)</span> ##########################################################################################################################################
 
 [What is about Javascript?](#what-is-about-javascript)
 
@@ -13,14 +13,14 @@ categories: js
 
 [What is API, browser API?](#what-is-api-browser-api)
 
-[SVG and Canvas !](#svg-and-canvas)
+[SVG and Canvas ! move to HTML](#svg-and-canvas)
 
 ------
 <br>
-## Browser
+## Browser ##########################################################################################################################################
 (everything about DOM and how the browser works)
 
-[What is DOM? What is data structure of DOM?](#what-is-dom-what-is-data-structure-of-dom)
+[What is data structure of DOM?](#what-is-data-structure-of-dom)
 
 [What is the difference between window, screen, and document in js?](#what-is-the-difference-between-window-screen-and-document-in-js)
 
@@ -37,7 +37,7 @@ What does a browser do after a user entered the URL of a website?
 
 ------
 <br>
-## Async
+## Async ##########################################################################################################################################
 (asynchronous behavior, promise, event loop)
 
 [What is XMLHttpRequest?](#what-is-xmlhttprequest)
@@ -47,17 +47,21 @@ What does a browser do after a user entered the URL of a website?
 
 ------
 <br>
-## Types
+## Types ##########################################################################################################################################
 (coercion, fundamental types, how the typing works in JS)
 
 [What is the difference between 2 and 3 equals?](#what-is-the-difference-between-2-and-3-equals)
 
-[What is the difference between a variable: null, undefined or undeclared?](#what-is-the-difference-between-a-variable-null-undefined-or-undeclared)
+[What is the difference between null, undefined or undeclared?](#what-is-the-difference-between-null-undefined-or-undeclared)
+
+[What is the difference between var, let and const?](#what-is-the-difference-between-var-let-and-const)
+
+[Explain hoisting !](#explain-hoisting)
 
 
 ------
 <br>
-## Objects
+## Objects ##########################################################################################################################################
 (this, scope, prototypes, classes)
 
 [What is scope?](#what-is-scope)
@@ -71,12 +75,14 @@ What does a browser do after a user entered the URL of a website?
 
 ------
 <br>
-## Functions and methods
+## Functions and methods ##########################################################################################################################################
 (bind, call, apply, functional programming)
+
+[What is ternary operator? !](#what-is-ternary-operator)
 
 [What is block scope, a function scope?](#)
 
-[What is ternary operator? !](#what-is-ternary-operator)
+[Explain arrow functions syntax !](#explain-arrow-functions-syntax)
 
 [What is the difference between .call and .apply, .bind?](#what-is-the-difference-between-call-and-apply-bind)
 
@@ -87,7 +93,7 @@ What does a browser do after a user entered the URL of a website?
 <br>
 
 
-## General
+## General ##########################################################################################################################################
 
 ### What is about Javascript?
 __JavaScript__ ("JS" for short) is a lightweight interpreted or JIT-compiled programming language with _first-class functions_
@@ -95,11 +101,10 @@ __JavaScript__ ("JS" for short) is a lightweight interpreted or JIT-compiled pro
 While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Adobe Acrobat and etc.
 JavaScript is a _prototype-based_, multi-paradigm, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
 
-What is Javascirpt, really? _JavaScript_ is a full-fledged _dynamic programming language_ that, when applied to an _HTML_ document, can provide dynamic interactivity on websites.
+It was invented by Brendan Eich, co-founder of the Mozilla. It is supported by all modern web browsers.
 
-It was invented by Brendan Eich, co-founder of the Mozilla.
-
-JS is one of three pillars of modern web development along with HTML and CSS. It is supported by all modern web browsers.
+Also _JavaScript_ is a full-fledged _dynamic programming language_ that, when applied to an _HTML_ document, can provide dynamic interactivity on websites.
+JS is one of three pillars of modern web development along with HTML and CSS.
 JS contains a standard library of objects, such as Array, Date and Math, and a core set of language elements such as operators, control structures, and statements.
 
 
@@ -111,9 +116,9 @@ Strict mode tightens the rules for parsing and error handling on your code. Some
 
 * makes debugging easier;
 * if you created a global variable it will report an error;
-* eliminates _this_ coercion: without 'strict mode', a reference to a this value of null or undefined is automatically coerced to the global.
-This can cause many headfakes and pull-out-your-hair kind of bugs.
-In _'strict mode'_, referencing a _this_ value of null or undefined throws an error;
+* eliminates __this__ coercion: without _'strict mode'_, a reference to a __this__ value of _null_ or _undefined_ is automatically coerced to the global.
+This can cause many headfakes and _pull-out-your-hair_ kind of bugs.
+In _'strict mode'_, referencing a __this__ value of _null_ or _undefined_ throws an error;
 * 'strict mode' throws an error when it detects a duplicate named property in an object
 (e.g., `var object = {foo: "bar", foo: "baz"}` ) or a duplicate named argument for a function (e.g., `function foo(val1, val2, val1){ }` )
 * makes using eval (_the function evaluates js code represented as a string_) a little safer that it is normally.
@@ -142,9 +147,9 @@ __Scalable Vector Graphics__ (SVG) is an _XML-based_ markup language for describ
 ------
 <br>
 
-## Browser
+## Browser ##########################################################################################################################################
 
-### What is DOM? What is data structure of DOM?
+### What is data structure of DOM?
 __DOM__ (Document Object Model) is a programming interface for HTML and XML documents.
 The DOM connects web pages to scripts or programming languages.
 
@@ -234,7 +239,7 @@ Benefits: if append a new child node, no need to rebind another event. New DOM c
 ------
 <br>
 
-## Async
+## Async ##########################################################################################################################################
 
 ### What is XMLHttpRequest?
 Use _XMLHttpRequest_ (XHR) objects to interact with servers.
@@ -270,7 +275,7 @@ The two major features of AJAX allow you to do the following:
 ------
 <br>
 
-## Types
+## Types ##########################################################################################################################################
 
 ### What is the difference between 2 and 3 equals?
 It is widely spread that __==__ checks for equality(value) and __===__ checks for equality(value) and type. Well, that is a misconception.
@@ -279,7 +284,7 @@ In fact, __==__ checks for equality with _coercion_ and __===__ checks for equal
 
 ---
 <br>
-### What is the difference between a variable: null, undefined or undeclared?
+### What is the difference between null, undefined or undeclared?
 _undefined_ is type of an declared variable that has not yet been assign to a value and is typeof itself “undefined”.
 
 _null_ is the absence of a value, it is an assignment value that can be assigned to a variable as a representation of 'no-value' and is typeof(null) —> object.
@@ -288,12 +293,37 @@ _undeclared_ variable means the variable doesn’t exist at all, which will caus
 
 How would you go about checking for any of these states? Use console.log and typeof to check if variable undefined or null.
 
+---
+<br>
+### What is the difference between var, let and const?
+_new GEN-JS_
+
+_let_ and _const_ was introduced recently in ES2015/ES6.
+
+__var__ has a functional scope. var can get hoisted.
+
+__let__ has block scope (a variable will die at the end of the block).
+
+__const__ is assign once and never change; this is never going to receive a new value.
+If you want to reassign the value, you will get an error.
+
+
+---
+<br>
+### Explain hoisting.
+The hoisting doesn’t make sense because in ECS6  because there are variables _let_ and _const_ which is block scope variable .
+
+Declaration of the variable by keyword _var_ and function declaration will moved invisiblly to the top of the containing scope.
+Function declarations are always moved (_hoisted_) to the top of their JS scope by the JS interpreter. You can use the function before you declared it.
+
+Function expressions in JS are not hoisted. You can't use function expressions before you define them.
+
 
 ------
 ------
 <br>
 
-## Objects
+## Objects ##########################################################################################################################################
 
 ### What is scope?
 __Scope__ refers to the _execution context_. It defines the accessibility of variables and functions in the code.
@@ -338,12 +368,31 @@ this keeps the value from its original context.
 ------
 <br>
 
-## Functions and Methods
+## Functions and Methods ##########################################################################################################################################
 
 ### What is ternary operator?
-What does the word "ternary" indicate?. The conditional operator is the only js operator that takes three operands. This operator is frequently used as a shortcut for the `if` statement:
+What does the word "ternary" indicate?.
+The conditional operator is the only js operator that takes three operands.
+This operator is frequently used as a shortcut for the `if` statement:
 
 `condition ? expr1 : expr2`
+
+
+---
+<br>
+### Explain arrow functions syntax.
+_new GEN-JS_
+
+Arrow functions that’s a different syntax for creating js functions which is omit a _function_ keyword and solve the issue with __this__ keyword.
+__this__ keyword doesn’t always refer to what you might have expected to refer during writing a code.
+Arrow function keeps context and don’t change during runtime.
+
+`
+const myFunc = ( ) => {
+    ...
+}
+`
+
 
 ---
 <br>
