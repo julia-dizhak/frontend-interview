@@ -298,14 +298,36 @@ How would you go about checking for any of these states? Use console.log and typ
 ### What is the difference between var, let and const?
 _new GEN-JS_
 
-_let_ and _const_ was introduced recently in ES2015/ES6.
+__var__ has a functional scope and can get hoisted.
 
-__var__ has a functional scope. var can get hoisted.
+_let_ and _const_ was introduced recently in ES2015/ES6.
+The _let_ and _const_ block bindings introduce lexical scoping to JS.
+These declarations are not hoisted and only exist within the block in which they are declared and cannot be accessed until after the declaration (The Temporal Dead Zone).
 
 __let__ has block scope (a variable will die at the end of the block).
 
 __const__ is assign once and never change; this is never going to receive a new value.
 If you want to reassign the value, you will get an error.
+A _const_ declaration prevents modification of the binding and not of the value itself.
+That means _const_ declarations for objects do not prevent modification of those objects.
+For example:
+
+{% highlight ruby %}
+const person = {
+    name: "Nicholas"
+};
+
+// works
+person.name = "Greg";
+
+// throws an error
+person = {
+    name: "Greg"
+};
+{% endhighlight ruby %}
+
+The current best practice for block bindings is to use _const_ by default and only use _let_ when you know a variable’s value needs to change.
+This ensures a basic level of immutability in code that can help prevent certain types of errors.
 
 
 ---
